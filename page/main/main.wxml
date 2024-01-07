@@ -1,0 +1,6 @@
+<!-- pages/mian/main.wxml -->
+<view class="container">
+  <button class="mirror-button" bindtap="onMirrorButtonClick">
+    : )
+  </button>
+</view>
