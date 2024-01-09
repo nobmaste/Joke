@@ -9,5 +9,13 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true
+  },
+  
+  "permission": {
+    "scope.camera": {
+      "desc": "你的摄像头将用于小程序的拍照和扫码功能"
+    }
   }
+
+
 }
