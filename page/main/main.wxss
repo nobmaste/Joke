@@ -1,4 +1,4 @@
-/* pages/main/main.wxss */
+/* pages/index/index.wxss */
 .container {
   display: flex;
   flex-direction: column;
@@ -16,6 +16,9 @@
   border: none;
   border-radius: 5px;
   overflow: hidden;
+  margin-top: 20px; /* 调整按钮与摄像头之间的间距 */
 }
-
-
+.frame-info {
+  margin-top: 10px;
+  text-align: center;
+}
