@@ -12,17 +12,13 @@
 
 <view class="container">
   <!-- Camera Preview -->
-  <camera device-position="back" flash="off" binderror="onCameraError" bindframe="onCameraFrame" style="width: 100%; height: 60%;"></camera>
+  <camera device-position="back" flash="off" bindframe="onLoad" style="width: 100%; height: 60%;"></camera>
 
   <!-- Display Frame Information -->
   <view class="frame-info">
-    <text>Width: {{frameWidth}}</text>
-    <text>Height: {{frameHeight}}</text>
-    <text>Data is ArrayBuffer: {{isDataArrayBuffer}}</text>
+   
   </view>
 
-  <!-- Display Image Data URL (if applicable) -->
-  <image wx:if="{{isDataArrayBuffer}}" mode="widthFix" src="{{imageDataUrl}}" style="width: 100%; height: 200px;"></image>
 </view>
 
 
