@@ -3,7 +3,7 @@ var log = require('../../log/log.js'); // 引用上面的log.js文件
 Page({
   data: {
     cameraContext: null,
-    data_status: true,
+    data_status: false,
     lastLogTime: 0,
     logInterval: 1000, // 设置输出时间间隔为1秒
     listener: null, // 存储监听器对象
@@ -19,8 +19,12 @@ Page({
     this.setData({
       listener: this.data.cameraContext.onCameraFrame((frame) => {
         if (!this.data.lastLogTime || Date.now() - this.data.lastLogTime >= this.data.logInterval) { // 设置输出时间
-          console.log('Received camera frame:');
-          console.log(frame.data);
+          console.log('success');
+          console.log(frame.data instanceof ArrayBuffer, frame.width, frame.height)
+          console.log('直接打印');
+          console.log(frame.data);//直接打印
+          console.log('转化uint8打印');
+          console.log(new Uint8Array(frame.data));
           this.setData({
             lastLogTime: Date.now(), // 更新 lastLogTime
            });
@@ -28,7 +32,7 @@ Page({
       }),
     });
 
-    this.data.listener.start();
+    //this.data.listener.start();
     
 },
 
